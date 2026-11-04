@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/socdb}
+    username: ${SPRING_DATASOURCE_USERNAME:soc}
+    password: ${SPRING_DATASOURCE_PASSWORD:soc_dev_password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: 6379
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+app:
+  jwt-secret: ${JWT_SECRET:local-development-secret-change-this-32-characters-minimum}
+  ml-url: ${ML_SERVICE_URL:http://localhost:8000}
+  cors-origin: ${APP_CORS_ORIGIN:http://localhost:5173}

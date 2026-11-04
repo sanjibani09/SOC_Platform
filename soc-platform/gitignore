@@ -1,0 +1,40 @@
+# Secrets - never commit real values
+.env
+**/.env
+.env.*
+!.env.example
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.log
+hs_err_pid*
+
+# Node / Vite
+node_modules/
+dist/
+npm-debug.log*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Trained model (rebuilt during the Docker image build)
+*.joblib
+
+# Docker
+docker-compose.override.yml
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

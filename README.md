@@ -4,6 +4,12 @@ Sentinel is a small Security Operations Center (SOC) you can run on your own mac
 
 I built it to see how the pieces of a real SOC fit together: log ingestion, detection, risk scoring, incident handling, and an audit trail.
 
+## For signin
+Use this email and password for testing :
+SOC_ADMIN_EMAIL=admin@soc.local
+SOC_ADMIN_PASSWORD=ChangeMe123!
+
+
 ## What it does
 
 - **Collects events** through a REST API (logins, file access, and similar activity).
